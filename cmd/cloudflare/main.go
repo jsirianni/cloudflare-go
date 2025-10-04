@@ -1,3 +1,5 @@
+// Command cloudflare provides a CLI to synchronize a Cloudflare DNS A record
+// with the machine's current public IP, using the reusable cloudflare client.
 package main
 
 import (

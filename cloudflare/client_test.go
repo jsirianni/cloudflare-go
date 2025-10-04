@@ -21,7 +21,7 @@ type recorded struct {
 	Body   string
 }
 
-func newTestServer(t *testing.T, handler func(w http.ResponseWriter, r *http.Request)) *httptest.Server {
+func newTestServer(t *testing.T, handler func(http.ResponseWriter, *http.Request)) *httptest.Server {
 	t.Helper()
 	return httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		handler(w, r)

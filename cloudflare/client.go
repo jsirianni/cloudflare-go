@@ -1,3 +1,6 @@
+// Package cloudflare provides a minimal, extensible Cloudflare v4 API client
+// with standard-library-only dependencies, context-aware HTTP requests,
+// and an options pattern for clean configuration and future growth.
 package cloudflare
 
 import (
@@ -35,7 +38,9 @@ const (
 type AuthMode int
 
 const (
+	// AuthGlobalKey uses X-Auth-Email and X-Auth-Key headers.
 	AuthGlobalKey AuthMode = iota
+	// AuthAPIToken uses an OAuth2-style Bearer token in Authorization header.
 	AuthAPIToken
 )
 

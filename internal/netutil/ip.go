@@ -1,3 +1,4 @@
+// Package netutil provides small networking utilities used by the CLI and client.
 package netutil
 
 import (
