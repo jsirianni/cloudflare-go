@@ -63,7 +63,7 @@ func TestFindZoneID_Success(t *testing.T) {
 }
 
 func TestFindZoneID_NotFound(t *testing.T) {
-	srv := newTestServer(t, func(w http.ResponseWriter, r *http.Request) {
+	srv := newTestServer(t, func(w http.ResponseWriter, _ *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		json.NewEncoder(w).Encode(map[string]any{
 			"success": true,
